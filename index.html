@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Grammar Parser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Custom Grammar Parser</h1>
+        </header>
+        <main>
+            <section class="input-section">
+                <label for="grammar">Grammar Rules (one per line)</label>
+                <textarea id="grammar" placeholder="Enter grammar rules (e.g., E -> E + E)"></textarea>
+
+                <div class="input-group">
+                    <input type="text" id="inputString" placeholder="Enter input string (e.g., id + id * id)">
+                    <button id="parseButton">Parse</button>
+                </div>
+
+                <div class="error" id="error"></div>
+            </section>
+
+            <section class="output-section">
+                <table id="outputTable">
+                  <section class="output-section">
+                    <h2>3-Address Code</h2>
+                    <div id="threeAddressCode"></div>
+                   </section>
+
+                    <thead>
+                        <tr>
+                            <th>Stack</th>
+                            <th>Input</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="outputBody">
+                        <!-- Parsing steps will be inserted here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
